@@ -1,7 +1,5 @@
 # Research Integrity Screener (RIS)
 
-### ▶︎ [Launch the live app](https://aimunna.shinyapps.io/research-integrity-screener/)
-
 [![Launch app](https://img.shields.io/badge/launch-live%20app-2c7be5?style=for-the-badge&logo=r)](https://aimunna.shinyapps.io/research-integrity-screener/)
 
 An R Shiny web application that runs statistical consistency checks on quantitative
