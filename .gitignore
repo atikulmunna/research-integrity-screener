@@ -1,0 +1,28 @@
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# renv (if used later)
+renv/library/
+renv/staging/
+
+# rsconnect deployment records
+rsconnect/
+
+# build artifacts
+*.tar.gz
+/*.Rcheck/
+
+# transient app/run logs
+setup/app_run_log.txt
+
+# OS
+.DS_Store
+Thumbs.db
+Rplots.pdf
+
+# Planning / spec docs (kept local, not published)
+SRS_*.md
