@@ -85,21 +85,12 @@ overview_intro <- function() {
 #' resources inside the Shiny application.
 #'
 #' @import shiny
-#' @importFrom golem add_resource_path activate_js favicon bundle_resources
 #' @noRd
 golem_add_external_resources <- function() {
-  add_resource_path(
-    "www",
-    app_sys("app/www")
-  )
+  shiny::addResourcePath("www", app_sys("app/www"))
 
   tags$head(
-    favicon(),
-    bundle_resources(
-      path = app_sys("app/www"),
-      app_title = "RIS"
-    )
-    # Add here other external resources
-    # for example, you can add shinyalert::useShinyalert()
+    tags$link(rel = "icon", type = "image/x-icon", href = "www/favicon.ico")
+    # Add other external resources here if needed.
   )
 }

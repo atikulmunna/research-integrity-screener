@@ -6,7 +6,6 @@
 #'
 #' @export
 #' @importFrom shiny shinyApp
-#' @importFrom golem with_golem_options
 run_app <- function(
   onStart = NULL,
   options = list(),
@@ -14,15 +13,15 @@ run_app <- function(
   uiPattern = "/",
   ...
 ) {
-  with_golem_options(
-    app = shinyApp(
-      ui = app_ui,
-      server = app_server,
-      onStart = onStart,
-      options = options,
-      enableBookmarking = enableBookmarking,
-      uiPattern = uiPattern
-    ),
-    golem_opts = list(...)
+  # Plain shinyApp (no golem::with_golem_options) so the app has no runtime
+  # dependency on golem internals — more robust across hosting environments.
+  # We don't use golem_opts/get_golem_options anywhere.
+  shiny::shinyApp(
+    ui = app_ui,
+    server = app_server,
+    onStart = onStart,
+    options = options,
+    enableBookmarking = enableBookmarking,
+    uiPattern = uiPattern
   )
 }
