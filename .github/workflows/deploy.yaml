@@ -37,7 +37,9 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         if: ${{ env.SHINYAPPS_TOKEN != '' }}
         with:
-          extra-packages: any::rsconnect
+          # pkgload is needed because app.R loads the package via pkgload::load_all,
+          # so rsconnect must see it when building the deployment manifest.
+          extra-packages: any::rsconnect, any::pkgload
 
       - name: Deploy to shinyapps.io
         if: ${{ env.SHINYAPPS_TOKEN != '' }}
