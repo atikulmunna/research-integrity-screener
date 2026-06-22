@@ -44,7 +44,7 @@ app_ui <- function(request) {
       ),
       bslib::nav_panel(
         title = "GRIM / SPRITE", value = "manual",
-        tags$p(class = "text-muted small", "Manual entry — no PDF required."),
+        tags$p(class = "text-muted small", "Manual entry - no PDF required."),
         mod_grim_ui("grim"),
         mod_sprite_ui("sprite")
       ),
@@ -71,9 +71,9 @@ overview_intro <- function() {
     ),
     div(
       class = "mb-3",
-      tier_badge("Core"), " statcheck, GRIM, SPRITE — reliable on a single paper. ",
-      tier_badge("Exploratory"), " p-curve — a screening heuristic only. ",
-      tier_badge("Meta-analysis"), " z-curve — for literatures, usually not a single paper."
+      tier_badge("Core"), " statcheck, GRIM, SPRITE - reliable on a single paper. ",
+      tier_badge("Exploratory"), " p-curve - a screening heuristic only. ",
+      tier_badge("Meta-analysis"), " z-curve - for literatures, usually not a single paper."
     ),
     tags$hr()
   )

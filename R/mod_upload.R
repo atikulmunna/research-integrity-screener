@@ -23,7 +23,7 @@ mod_upload_ui <- function(id) {
 }
 
 #' Build the success confirmation UI (FR-04 stage 1: page + word counts only,
-#' no statistic count — that belongs to the statcheck scan stage).
+#' no statistic count - that belongs to the statcheck scan stage).
 #' @noRd
 upload_success_ui <- function(res) {
   div(

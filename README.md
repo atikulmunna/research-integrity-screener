@@ -6,10 +6,10 @@
 
 An R Shiny web application that runs statistical consistency checks on quantitative
 research manuscripts and produces a unified integrity-screening report. It wraps five
-established integrity-testing methods — **statcheck, p-curve, z-curve, GRIM, and
-SPRITE** — behind one accessible interface.
+established integrity-testing methods - **statcheck, p-curve, z-curve, GRIM, and
+SPRITE** - behind one accessible interface.
 
-> **Flagged results indicate potential inconsistencies warranting further examination —
+> **Flagged results indicate potential inconsistencies warranting further examination -
 > not evidence of misconduct.** No single automated flag is sufficient grounds for an
 > editorial decision or an allegation.
 
@@ -34,7 +34,7 @@ and the overall signal is driven by the **Core** tier only:
 ### Applicable papers
 
 Designed for **quantitative psychology, medicine, social science, and educational
-measurement** — papers that report classical significance tests (`t`, `F`, `χ²`, `z`, `r`).
+measurement** - papers that report classical significance tests (`t`, `F`, `χ²`, `z`, `r`).
 It is **not** applicable to pure ML/CS, theoretical, or qualitative papers (which report
 no such statistics); RIS simply reports "no statistics detected" for those.
 
@@ -42,7 +42,7 @@ no such statistics); RIS simply reports "no statistics detected" for those.
 
 ## Walkthrough
 
-### 1. statcheck — APA statistic consistency (Core)
+### 1. statcheck - APA statistic consistency (Core)
 
 Recomputes each reported p-value from its test statistic and degrees of freedom, then
 flags mismatches. A **decision error** (the mismatch crosses the .05 threshold) is marked
@@ -50,8 +50,8 @@ flags mismatches. A **decision error** (the mismatch crosses the .05 threshold) 
 
 ![statcheck results table](assets/statcheck-results.png)
 
-*Here statcheck checked 14 statistics and flagged `t(18) = -2.3, p = .060` — which
-recomputes to p ≈ .034 — as a decision error.*
+*Here statcheck checked 14 statistics and flagged `t(18) = -2.3, p = .060` - which
+recomputes to p ≈ .034 - as a decision error.*
 
 ### 2. p-curve & z-curve
 
@@ -62,12 +62,12 @@ finding" caveat. z-curve estimates the average power of a *literature* and repor
 
 ![p-curve histogram and z-curve not-applicable notice](assets/pcurve-zcurve.png)
 
-### 3. GRIM / SPRITE — manual entry (Core)
+### 3. GRIM / SPRITE - manual entry (Core)
 
 Deterministic checks that need no PDF:
 
-- **GRIM** — is a reported mean mathematically achievable for its sample size and scale?
-- **SPRITE** — does *any* set of integer responses reproduce the reported mean and SD? If
+- **GRIM** - is a reported mean mathematically achievable for its sample size and scale?
+- **SPRITE** - does *any* set of integer responses reproduce the reported mean and SD? If
   not, the combination is mathematically impossible; if so, it plots an example distribution.
 
 ### 4. Unified Report
@@ -95,7 +95,7 @@ Rscript dev/run_local.R 8100
 # then open http://127.0.0.1:8100
 ```
 
-PDF text extraction uses `pdftools`, which bundles Poppler on Windows — no separate
+PDF text extraction uses `pdftools`, which bundles Poppler on Windows - no separate
 system library is required.
 
 ---
@@ -103,7 +103,7 @@ system library is required.
 ## Privacy
 
 Uploaded documents are processed **in-memory** and are not stored or transmitted. The
-only file written is the report you choose to download (computed results only — never the
+only file written is the report you choose to download (computed results only - never the
 original PDF or its extracted text).
 
 ---
@@ -112,12 +112,12 @@ original PDF or its extracted text).
 
 Correctness is covered by an automated test suite (`testthat`, ~300 checks):
 
-- **Synthetic golden corpus** — hand-computed GRIM/SPRITE cases and statcheck cases
+- **Synthetic golden corpus** - hand-computed GRIM/SPRITE cases and statcheck cases
   covering each test type (consistent + decision-error variants).
-- **Real-paper corpus** — open-access PLOS ONE PDFs (a known-clean paper and one with a
+- **Real-paper corpus** - open-access PLOS ONE PDFs (a known-clean paper and one with a
   genuine reporting inconsistency) plus documented GRIM failures from a published critique.
   See `tests/testthat/fixtures/FIXTURES_ATTRIBUTION.md`.
-- **Independent-implementation parity** — the custom p-curve is checked against
+- **Independent-implementation parity** - the custom p-curve is checked against
   `dmetar::pcurve()` to within rounding tolerance.
 
 ```r
@@ -151,8 +151,8 @@ R Shiny via `{golem}` · `bslib` (Bootstrap 5, "flatly" theme) · `pdftools` · 
 
 ## References
 
-- Nuijten et al. (2016) — statcheck
-- Simonsohn et al. (2014, 2015) — p-curve
-- Brunner & Schimmack (2020) — z-curve
-- Brown & Heathers (2017) — GRIM
-- Heathers et al. (2018) — SPRITE
+- Nuijten et al. (2016) - statcheck
+- Simonsohn et al. (2014, 2015) - p-curve
+- Brunner & Schimmack (2020) - z-curve
+- Brown & Heathers (2017) - GRIM
+- Heathers et al. (2018) - SPRITE

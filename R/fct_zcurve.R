@@ -1,4 +1,4 @@
-# z-curve analysis (Module 3, META-ANALYSIS tier) — FR-15..FR-18.
+# z-curve analysis (Module 3, META-ANALYSIS tier) - FR-15..FR-18.
 # Thin wrapper over the zcurve package. z-curve estimates the average power of a
 # *body* of studies; it needs a literature-sized set (>= 20 significant tests),
 # which single manuscripts rarely supply (FR-18 / DR-02).
@@ -41,7 +41,7 @@ run_zcurve <- function(p_values, min_n = 20, bootstrap = 1000, seed = NULL) {
       ok = FALSE, n = n,
       message = sprintf(
         paste0("z-curve needs at least %d significant tests to model a literature. ",
-               "Only %d %s available, so this analysis is not applicable here — ",
+               "Only %d %s available, so this analysis is not applicable here - ",
                "z-curve is intended for meta-analyses and multi-study papers, not ",
                "single manuscripts."),
         min_n, n, if (n == 1) "is" else "are"

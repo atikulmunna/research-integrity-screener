@@ -1,4 +1,4 @@
-# Applicability heuristic (UX-08 / UX-08a). Advisory only — it never gates or
+# Applicability heuristic (UX-08 / UX-08a). Advisory only - it never gates or
 # disables anything; it just surfaces a soft banner when a paper looks like it
 # may fall outside the types RIS is designed for (§4.2).
 

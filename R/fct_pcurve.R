@@ -1,4 +1,4 @@
-# p-curve analysis (Module 2, EXPLORATORY tier) — FR-11..FR-14.
+# p-curve analysis (Module 2, EXPLORATORY tier) - FR-11..FR-14.
 # Custom implementation of Simonsohn, Nelson & Simons (2014) + the full/half
 # combination of Simonsohn (2015), since there is no maintained CRAN package
 # (§11.2). This is a screening heuristic, NOT a methodological p-curve: it runs
@@ -103,7 +103,7 @@ pcurve_interpretation <- function(ev, power) {
     ev,
     present = "The p-curve leans right-skewed, consistent with the set containing some evidential value.",
     absent = "The p-curve is flat or left-skewed, consistent with little evidential value (e.g. selective reporting or low power).",
-    "The p-curve is inconclusive — it neither clearly indicates nor clearly rules out evidential value."
+    "The p-curve is inconclusive - it neither clearly indicates nor clearly rules out evidential value."
   )
   paste0(base, " Estimated average power: ", pwr, ".")
 }

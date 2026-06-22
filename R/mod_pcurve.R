@@ -1,5 +1,5 @@
 # Module: p-curve (EXPLORATORY tier). Consumes the canonical statcheck result
-# (FR-10a) — it uses the parsed test statistics, which the noncentral method
+# (FR-10a) - it uses the parsed test statistics, which the noncentral method
 # requires. The focal-test caveat (FR-11a) is shown inline and always visible.
 
 #' p-curve module UI
@@ -7,12 +7,12 @@
 mod_pcurve_ui <- function(id) {
   ns <- NS(id)
   bslib::card(
-    bslib::card_header("p-curve — evidential value (screening)  ", tier_badge("Exploratory")),
+    bslib::card_header("p-curve - evidential value (screening)  ", tier_badge("Exploratory")),
     bslib::card_body(
       # FR-11a: mandatory, always-visible caveat (not behind the explainer).
       div(
         class = "alert alert-warning", role = "alert",
-        tags$strong("Screening heuristic — not a methodological p-curve. "),
+        tags$strong("Screening heuristic - not a methodological p-curve. "),
         "These p-values are auto-extracted from every detected test, not the ",
         "manually chosen focal tests a valid p-curve requires. Read the result ",
         "as a prompt for closer manual review, not as a finding."
@@ -54,8 +54,8 @@ mod_pcurve_server <- function(id, statcheck_res) {
       if (!isTRUE(r$ok)) {
         return(div(class = "alert alert-secondary", role = "alert", r$message))
       }
-      fp <- function(p) if (is.na(p)) "—" else fmt_p(p)
-      pwr <- if (is.na(r$power)) "—" else paste0(round(100 * r$power), "%")
+      fp <- function(p) if (is.na(p)) "-" else fmt_p(p)
+      pwr <- if (is.na(r$power)) "-" else paste0(round(100 * r$power), "%")
       tagList(
         div(class = "fw-semibold mb-1",
             sprintf("Based on %d significant test%s.", r$k, if (r$k == 1) "" else "s")),

@@ -1,4 +1,4 @@
-# RIS dependency installer — run once to provision the R environment.
+# RIS dependency installer - run once to provision the R environment.
 # Installs CRAN binaries (no source compilation expected on R 4.6 for Windows).
 
 options(

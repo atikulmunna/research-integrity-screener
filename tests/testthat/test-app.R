@@ -1,5 +1,5 @@
 # Scaffold sanity checks: the golem app shell is wired up correctly.
-# These are deliberately minimal — real coverage arrives module by module.
+# These are deliberately minimal - real coverage arrives module by module.
 
 test_that("app_ui returns a shiny tag list", {
   ui <- app_ui(request = list())

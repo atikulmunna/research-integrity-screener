@@ -54,7 +54,7 @@ test_that("GRIM corpus: results match hand computation", {
 })
 
 # Real documented GRIM failures from van der Zee, Anaya & Brown (2017),
-# "Statistical heartburn" (BMC Nutrition, CC BY) — Cornell pizza papers, 1-9
+# "Statistical heartburn" (BMC Nutrition, CC BY) - Cornell pizza papers, 1-9
 # Likert scales. Numbers only; each re-verified against scrutiny::grim().
 test_that("GRIM corpus: documented Wansink pizza-paper means are inconsistent", {
   wansink <- list(

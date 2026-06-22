@@ -11,7 +11,7 @@ GRIM_PLACEHOLDER <- paste(
 mod_grim_ui <- function(id) {
   ns <- NS(id)
   bslib::card(
-    bslib::card_header("GRIM — granularity check  ", tier_badge("Core")),
+    bslib::card_header("GRIM - granularity check  ", tier_badge("Core")),
     bslib::card_body(
       fillable = FALSE,  # form inputs flow naturally, not squeezed by flex-fill
       explainer_panel(

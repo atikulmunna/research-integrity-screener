@@ -30,6 +30,6 @@ explainer_panel <- function(summary_text, ...) {
 #' @noRd
 fmt_p <- function(p) {
   out <- ifelse(p < .001, "< .001", sub("^0", "", sprintf("%.3f", p)))
-  out[is.na(p)] <- "—"
+  out[is.na(p)] <- "-"
   out
 }

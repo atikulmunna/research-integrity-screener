@@ -120,15 +120,15 @@ section_statcheck <- function(sc) {
 #' @noRd
 section_pcurve <- function(pc) {
   if (is.null(pc) || !isTRUE(pc$ok)) return(not_run_note(pc))
-  fp <- function(p) if (is.na(p)) "—" else fmt_p(p)
+  fp <- function(p) if (is.na(p)) "-" else fmt_p(p)
   tagList(
-    tags$p(tags$strong("Screening heuristic — not evidence."),
+    tags$p(tags$strong("Screening heuristic - not evidence."),
            " Based on auto-extracted tests, not hand-selected focal tests."),
     tags$ul(
       tags$li(sprintf("Right-skew test: Z = %.2f, p = %s", pc$rightskew$z_full, fp(pc$rightskew$p_full))),
       tags$li(sprintf("Flatness test: Z = %.2f, p = %s", pc$flatness$z_full, fp(pc$flatness$p_full))),
       tags$li(sprintf("Estimated power: %s",
-                      if (is.na(pc$power)) "—" else paste0(round(100 * pc$power), "%")))
+                      if (is.na(pc$power)) "-" else paste0(round(100 * pc$power), "%")))
     ),
     tags$p(pc$interpretation)
   )
@@ -195,7 +195,7 @@ report_css <- function() {
 }
 
 #' Build the self-contained HTML report document (FR-34). Pure in-memory tag
-#' construction (FR-34a preferred path) — no rmarkdown/knitr temp directory, and
+#' construction (FR-34a preferred path) - no rmarkdown/knitr temp directory, and
 #' it contains computed results only, never the PDF or extracted text (§9.7).
 #' @noRd
 build_report_html <- function(report, file_name = NULL) {
@@ -204,11 +204,11 @@ build_report_html <- function(report, file_name = NULL) {
     lang = "en",
     tags$head(
       tags$meta(charset = "utf-8"),
-      tags$title("Research Integrity Screener — Report"),
+      tags$title("Research Integrity Screener - Report"),
       tags$style(htmltools::HTML(report_css()))
     ),
     tags$body(
-      tags$h1("Research Integrity Screener — Report"),
+      tags$h1("Research Integrity Screener - Report"),
       tags$p(
         class = "meta",
         sprintf("Generated: %s", format(report$generated, "%Y-%m-%d %H:%M:%S")),

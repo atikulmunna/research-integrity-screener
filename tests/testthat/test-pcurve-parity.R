@@ -1,7 +1,7 @@
 # NFR-15 parity: RIS's custom p-curve vs dmetar::pcurve(), an independent R
 # implementation of Simonsohn's p-curve. Both engines receive identical inputs
 # (p-values -> z-scores; dmetar via metagen(TE = z, seTE = 1), RIS via chi^2(1)
-# with x = z^2). dmetar/meta are dev-only references — skipped if absent, never
+# with x = z^2). dmetar/meta are dev-only references - skipped if absent, never
 # added to the package's runtime Imports.
 #
 # Tolerances are generous because dmetar rounds its reported statistics to three

@@ -43,7 +43,7 @@ pdf_error_message <- function(type) {
     encrypted = "This PDF is password-protected and cannot be read. Please upload an unlocked copy.",
     corrupted = "This file could not be read as a PDF. It may be corrupted or not a valid PDF.",
     scanned   = paste0(
-      "This PDF appears to be image-only or scanned — no text layer was found. ",
+      "This PDF appears to be image-only or scanned - no text layer was found. ",
       "RIS needs a text-based PDF (OCR is not supported)."
     ),
     not_found = "The uploaded file could not be found.",

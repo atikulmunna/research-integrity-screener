@@ -1,4 +1,4 @@
-# GRIM test (Module 4, Core tier) — FR-19..FR-25.
+# GRIM test (Module 4, Core tier) - FR-19..FR-25.
 # Pure logic, no Shiny. The mean is carried as a STRING throughout because
 # GRIM consistency depends on the reported decimal precision (FR-22a):
 # scrutiny::grim("5.20", 28) is FALSE but grim("5.2", 28) is TRUE.
@@ -134,7 +134,7 @@ display_grim_table <- function(tbl) {
     Invalid      = "⛔ Invalid"
   )
   data.frame(
-    Label         = ifelse(nzchar(tbl$label), tbl$label, "—"),
+    Label         = ifelse(nzchar(tbl$label), tbl$label, "-"),
     M             = tbl$mean,
     n             = tbl$n,
     Scale         = sprintf("%g–%g", tbl$scale_min, tbl$scale_max),

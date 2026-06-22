@@ -14,7 +14,7 @@ run_app <- function(
   ...
 ) {
   # Plain shinyApp (no golem::with_golem_options) so the app has no runtime
-  # dependency on golem internals — more robust across hosting environments.
+  # dependency on golem internals - more robust across hosting environments.
   # We don't use golem_opts/get_golem_options anywhere.
   shiny::shinyApp(
     ui = app_ui,

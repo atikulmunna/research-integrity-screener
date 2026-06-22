@@ -22,7 +22,7 @@ test_that("fmt_p formats APA p-values", {
   expect_equal(fmt_p(0.0362), ".036")
   expect_equal(fmt_p(0.0005), "< .001")
   expect_equal(fmt_p(0.05),   ".050")
-  expect_equal(fmt_p(NA_real_), "—")
+  expect_equal(fmt_p(NA_real_), "-")
 })
 
 # --- run_statcheck against the real statcheck engine ---

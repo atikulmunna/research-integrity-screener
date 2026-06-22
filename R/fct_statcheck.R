@@ -1,4 +1,4 @@
-# statcheck analysis (Module 1, Core tier) — FR-06..FR-10, FR-10a.
+# statcheck analysis (Module 1, Core tier) - FR-06..FR-10, FR-10a.
 # Pure logic, no Shiny, directly unit-testable.
 
 #' Map statcheck's two logical flags to a severity label (FR-09, §9.1).

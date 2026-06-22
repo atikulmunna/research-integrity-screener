@@ -1,4 +1,4 @@
-# SPRITE test (Module 5, Core tier) — FR-26..FR-30. Uses rsprite2 (SPRITE was
+# SPRITE test (Module 5, Core tier) - FR-26..FR-30. Uses rsprite2 (SPRITE was
 # removed from scrutiny). Mean and SD are carried as STRINGS so their reported
 # decimal precision drives the feasibility check (m_prec / sd_prec).
 #
@@ -89,7 +89,7 @@ run_sprite <- function(mean, sd, n, scale_min, scale_max, items = 1,
   )
   inconclusive_msg <- paste0(
     "No example distribution was found within the search limit. This is ",
-    "inconclusive — not a proof of impossibility."
+    "inconclusive - not a proof of impossibility."
   )
   if (inherits(dists, "error") || is.null(dists) || nrow(dists) == 0) {
     return(c(base, list(status = "inconclusive", feasible = NA, n_found = 0L,

@@ -1,4 +1,4 @@
-# Validation fixtures — sources and licenses
+# Validation fixtures - sources and licenses
 
 Real-world PDFs used as validation-corpus fixtures. Both are open access under
 the Creative Commons Attribution (CC BY) license, which permits redistribution
@@ -11,7 +11,7 @@ with attribution.
 - Journal: PLOS ONE (2011)
 - DOI: 10.1371/journal.pone.0019815
 - License: CC BY
-- Why: statcheck finds several APA statistics, all internally consistent — a
+- Why: statcheck finds several APA statistics, all internally consistent - a
   false-positive guard (RIS must not raise critical flags on a clean paper).
 
 ## plos_timeperception_2016.pdf  (used as a "known-inconsistent" fixture)
@@ -20,12 +20,12 @@ with attribution.
 - Journal: PLOS ONE (2016)
 - DOI: 10.1371/journal.pone.0159842
 - License: CC BY
-- Why: statcheck finds a genuine reporting inconsistency — `t(18) = -2.3,
+- Why: statcheck finds a genuine reporting inconsistency - `t(18) = -2.3,
   p = .060` recomputes to p ≈ .034, a decision error (significance threshold
   crossed). Confirms RIS catches a real inconsistency in a published paper.
   (A reporting inconsistency is not evidence of misconduct.)
 
-## Documented GRIM cases (numbers only — no PDF needed)
+## Documented GRIM cases (numbers only - no PDF needed)
 
 The GRIM corpus cases attributed to the Cornell Food and Brand Lab "pizza"
 papers come from the open-access critique:

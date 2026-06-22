@@ -7,7 +7,7 @@ mod_statcheck_ui <- function(id) {
   ns <- NS(id)
   bslib::card(
     bslib::card_header(
-      "statcheck — APA statistic consistency  ",
+      "statcheck - APA statistic consistency  ",
       tier_badge("Core")
     ),
     bslib::card_body(
@@ -21,7 +21,7 @@ mod_statcheck_ui <- function(id) {
         tags$p(
           "An inconsistency means the reported and recomputed values do not ",
           "line up. A “decision error” is a mismatch that crosses the .05 ",
-          "significance threshold. These are not evidence of misconduct — they ",
+          "significance threshold. These are not evidence of misconduct - they ",
           "are often simple typos or transcription slips."
         )
       ),
@@ -52,7 +52,7 @@ mod_statcheck_server <- function(id, extraction) {
       div(
         class = "mb-2",
         sprintf(
-          "%d APA-formatted statistic%s checked — %d inconsistent (%d decision error%s).",
+          "%d APA-formatted statistic%s checked - %d inconsistent (%d decision error%s).",
           r$n_checked, if (r$n_checked == 1) "" else "s",
           r$n_inconsistent,
           r$n_decision_errors, if (r$n_decision_errors == 1) "" else "s"
@@ -66,7 +66,7 @@ mod_statcheck_server <- function(id, extraction) {
         req(isTRUE(r$ok))
         display_statcheck_table(r$table)
       },
-      striped = TRUE, spacing = "xs", width = "100%", na = "—"
+      striped = TRUE, spacing = "xs", width = "100%", na = "-"
     )
 
     result

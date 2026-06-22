@@ -7,7 +7,7 @@
 mod_sprite_ui <- function(id) {
   ns <- NS(id)
   bslib::card(
-    bslib::card_header("SPRITE — distribution feasibility  ", tier_badge("Core")),
+    bslib::card_header("SPRITE - distribution feasibility  ", tier_badge("Core")),
     bslib::card_body(
       fillable = FALSE,  # form inputs flow naturally, not squeezed by flex-fill
       explainer_panel(
@@ -20,7 +20,7 @@ mod_sprite_ui <- function(id) {
         tags$p(
           "If no set of responses can yield the reported mean and SD, the ",
           "combination is mathematically impossible. As with GRIM, the reported ",
-          "decimal places matter — enter the mean and SD exactly as printed."
+          "decimal places matter - enter the mean and SD exactly as printed."
         )
       ),
       bslib::layout_columns(

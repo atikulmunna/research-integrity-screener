@@ -7,7 +7,7 @@
 mod_zcurve_ui <- function(id) {
   ns <- NS(id)
   bslib::card(
-    bslib::card_header("z-curve — average power of a literature  ", tier_badge("Meta-analysis")),
+    bslib::card_header("z-curve - average power of a literature  ", tier_badge("Meta-analysis")),
     bslib::card_body(
       # FR-18 / DR-02: always-visible scope caveat.
       div(
