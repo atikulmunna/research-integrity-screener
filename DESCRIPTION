@@ -1,0 +1,33 @@
+Package: RIS
+Title: Research Integrity Screener
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "Intisar",
+           family = "Naheen",
+           role = c("aut", "cre"),
+           email = "intisarnaheen@gmail.com")
+Description: A Shiny application that runs statistical consistency checks
+    (statcheck, p-curve, z-curve, GRIM, and SPRITE) on quantitative
+    research manuscripts and produces a unified integrity-screening report.
+License: MIT + file LICENSE
+Imports:
+    config,
+    golem,
+    shiny,
+    bslib,
+    shinyjs,
+    shinycssloaders,
+    pdftools,
+    statcheck,
+    zcurve,
+    scrutiny,
+    rsprite2,
+    ggplot2,
+    rmarkdown,
+    stringr
+Suggests:
+    testthat (>= 3.0.0)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Config/testthat/edition: 3
