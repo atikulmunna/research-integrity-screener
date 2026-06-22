@@ -8,6 +8,9 @@ name: deploy
 on:
   push:
     branches: [master]
+    paths-ignore:
+      - '**/*.md'
+      - 'assets/**'
   workflow_dispatch:
 
 jobs:

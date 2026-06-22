@@ -1,5 +1,11 @@
 # Research Integrity Screener (RIS)
 
+### ▶︎ [Launch the live app](https://aimunna.shinyapps.io/research-integrity-screener/)
+
+[![Launch app](https://img.shields.io/badge/launch-live%20app-2c7be5?style=for-the-badge&logo=r)](https://aimunna.shinyapps.io/research-integrity-screener/)
+
+> Hosted on shinyapps.io (free tier) — the first request after idle may take ~30s while the instance wakes.
+
 A Shiny web application (R / `{golem}`) that runs statistical consistency checks on
 quantitative research manuscripts and produces a unified integrity-screening report.
 It wraps five established integrity-testing methods — **statcheck, p-curve, z-curve,
