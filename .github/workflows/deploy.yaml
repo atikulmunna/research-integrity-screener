@@ -37,9 +37,11 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         if: ${{ env.SHINYAPPS_TOKEN != '' }}
         with:
-          # pkgload is needed because app.R loads the package via pkgload::load_all,
-          # so rsconnect must see it when building the deployment manifest.
-          extra-packages: any::rsconnect, any::pkgload
+          # pkgload: app.R loads the package via pkgload::load_all, so rsconnect
+          #   must see it when building the manifest.
+          # cpp11: header-only LinkingTo dep (tidyr/isoband) that binary installs
+          #   omit at runtime, but renv's snapshot validation requires it present.
+          extra-packages: any::rsconnect, any::pkgload, any::cpp11
 
       - name: Deploy to shinyapps.io
         if: ${{ env.SHINYAPPS_TOKEN != '' }}
