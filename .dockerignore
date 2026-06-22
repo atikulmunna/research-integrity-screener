@@ -1,0 +1,10 @@
+# Keep the image lean — none of these are needed to run the app.
+.git
+.Rproj.user
+*.Rproj
+.claude
+assets
+setup
+SRS_*.md
+tests/testthat/fixtures
+rsconnect
